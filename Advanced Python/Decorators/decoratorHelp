@@ -1,0 +1,31 @@
+
+1: args vs kwargs
+*args -> Captures positional arguments.
+
+add(10, 20)
+becomes:
+args = (10, 20)
+
+**kwargs -> Captures keyword arguments.
+
+add(a=10, b=20)
+becomes:
+kwargs = {
+    "a": 10,
+    "b": 20
+}
+
+------------------------------------------------------------------
+2:
+What did @wraps(function) do?
+It tells Python: "This wrapper is wrapping function; preserve the original function's metadata."
+
+------------------------------------------------------------------
+
+3: @repeat(3)
+
+def hello():
+    print("Hello")
+
+is equivalent to:
+hello = repeat(3)(hello)
